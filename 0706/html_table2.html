@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <table border = "1">
+
+    <tr height = "80">
+      <td></td>
+      <td colspan = "4"></td>   <!-- 열을 합칠 때는 colspan -->
+    </tr>
+
+    <tr height = "80">
+      <td></td>
+      <td colspan = "4"></td>
+    </tr>
+
+    <tr height = "80">
+      <td width = "50" rowspan = "4"></td>    <!-- 행을 합칠 때는 rowspan -->
+      <td width = "80"></td>
+      <td colspan = "3"></td>
+      
+
+    </tr>
+
+    <tr height = "80">
+
+      <td rowspan = "3"></td>
+      <td colspan = "2"></td>
+
+      <td></td>
+    </tr>
+
+    <tr height = "80">
+
+      
+      <td width = "30"></td>
+      <td width = "30"></td>
+      <td width = "300"></td>
+    </tr>
+
+    <tr height = "80">
+
+      
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+
+  <hr>
+
+  <table border = "1">
+    <tr height = "80">
+      <td></td>
+      <td colspan = "3" bgcolor = "#FFD8D8"></td>
+      
+      
+    </tr>
+    <tr height = "80">
+      <td width = "100" rowspan = "3" bgcolor = "#FFD8D8"></td>
+      <td width = "100" rowspan = "2" bgcolor = "#FFA7A7"></td>
+      <td width = "100"></td>
+      <td width = "100" rowspan = "2" bgcolor = "##FFDDDD"></td>
+    </tr>
+    <tr height = "80">
+      
+      
+      <td></td>
+      
+    </tr>
+    <tr height = "80">
+      
+      <td colspan = "3" bgcolor = "#FFB9B9"></td>
+      
+      
+    </tr>
+  </table>
+
+  <hr>
+
+  <table border = "1">
+    <tr>
+      <th width = "50">번호</th>
+      <th width = "200">이름</th>
+      <th width = "100">성적</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>김유신</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>이순신</td>
+      <td>98</td>
+    </tr>
+  </table>
+
+  <hr>
+  
+  <img src = "./cat.jpg" width = "500">   <!-- img태그는 종료태그 없음 -->
+  
+  <hr>
+  
+  <video src = "liveclip.mp4" width = "500" controls></video>
+  <!-- video태그는 종료태그 있음-->
+  <!-- contorols 속성을 부여해야 웹사이트에 컨트롤바가 표시됨.-->
+
+  <hr>
+  
+  <video controls = "controls" width = "500">
+    <source 
+    src = "./liveclip.mp4"
+    type = "video/mp4">
+  </video>
+  <!-- 위 처럼 source 태그를 사용하여 비디오를 첨부할 수 도 있음.-->
+
+  <hr>
+
+  <iframe width="681" height="383" src="https://www.youtube.com/embed/AaOt0jZefis?list=RDCLAK5uy_lS4dqGRHszluFAbLsV-sHJCqULtBm2Gfw" title="[Live Clip] 볼빨간사춘기(BOL4) - &#39;여름날 (feat. 하현상)&#39;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  <!-- 
+    유튜브 영상 불러오기
+    1. 유튜브 영상 링크 접속
+    2. 영상 우클릭 -> 소스코드복사
+    3. 코드 붙여넣기
+    4. 웹창에서 바로 유튜브 영상 재생 가능
+  -->
+
+  <audio src = ""></audio>
+
+  <object width = "500" height = "700" data = "metaverse.pdf"></object>
+
+  
+</body>
+</html>
