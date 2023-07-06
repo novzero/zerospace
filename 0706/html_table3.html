@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table border = "0">
+    <tr height = "100">
+      <td>
+        <image src = "./cat4.jpg" width = "300" height = "100">
+      </td>
+      <td colspan = "3">
+        <ul style = "display:flex; list-style:none; justify-content : space-around">
+          <!-- 
+            display:flex; list-style:none;은 리스트 앞에 부호를 없애주는 역할
+            justify-content : space around : 단어 간격을 일정하게 해주는 역할
+          -->
+          <li>카페메뉴</li>
+          <li>커피이야기</li>
+          <li>창업문의</li>
+          <li>고객센터</li>
+        </ul>
+      </td>
+      
+      
+    </tr>
+    <tr height = "300">
+      <td colspan = "3">
+        <image src = "cat2.jpg" width = "900" height = "300">
+      </td>
+      
+      
+      <td rowspan = "3" width = "200">
+        <h3 style = "text-align: center;">지역별 점포현황</h3>
+        <!-- text-align 은 텍스트 정렬 속성-->
+      
+        <dl style = "text-align : center;">
+          <dt><b>수도권</b></dt>
+            <dd>수도권</dd>
+            <dd>서울</dd>
+            <dd>인천</dd>
+            <dd>경기</dd>
+            <dd>분당</dd>
+
+          <dt><b>충청도</b></dt>
+            <dd>대전</dd>
+            <dd>청주</dd>
+            <dd>아산</dd>
+            <dd>옥천</dd>
+          
+        </dl>
+      </td>
+    </tr>
+
+    <tr height = "200">
+      <td width = "300">
+        <ul>
+          <li>공지사항1</li>
+          <li>공지사항2</li>
+          <li>공지사항3</li>
+          <li>공지사항4</li>
+        </ul>
+      </td>
+      <td width = "300">
+        <image src = "./cat.jpg" width = "300" height = "200">
+      </td>
+      <td width = "300">
+        <ol>
+          <li>인기메뉴1</li>
+          <li>인기메뉴2</li>
+          <li>인기메뉴3</li>
+          <li>인기메뉴4</li>
+          <li>인기메뉴5</li>
+        </ol>
+      </td>
+      <!-- li{인기메뉴$}*5 라고 작성하면 자동 작성.-->
+      
+    </tr>
+
+    <tr height = "100">
+      <td colspan = "3"></td>
+      
+      
+      
+    </tr>
+
+  </table>
+</body>
+</html>
