@@ -1,0 +1,49 @@
+#wrap{
+  width : 100%;
+  margin : 0 auto;
+  border : 1px solid black;
+}
+
+
+#box1{
+  border : 1px solid red;
+  height : 50px;
+  width : 50%;
+  margin-bottom : 50px;
+  line-height : 50px;
+  font-size : 20px;
+  font-weight : 900;
+}
+
+
+#box2{
+  border:1px dashed blue;
+  width : 300px;
+  height : 100px;
+  line-height : 100px;
+}
+
+#box1, #box2{
+  text-align : center;
+  vertical-align : middle;
+}
+
+.logo_box{
+  width:200px;
+  float:left;
+}
+
+.logo_box img{
+  height : 50px;
+
+}
+
+
+.menu{
+  list-style-type:none;
+}
+
+.menuTitle{
+  float:left;
+  margin-left:80px;
+}

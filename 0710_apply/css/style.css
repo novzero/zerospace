@@ -1,0 +1,44 @@
+
+#resume{
+  width : 500px;
+  margin : 0 auto;
+}
+/*
+width는 전체 너비 지정(필수)
+margin은 여백을 지정하는 속성
+0 위치에는 상하여백을 지정한 것.
+auto 위치에는 좌우여백을 지정해야하는데 auto는 자동으로 똑같은 값으로 설정하는 것.
+*/
+.title{
+  text-align : right;
+
+}
+
+.intro{
+  font-size : 12px;
+}
+
+.need{
+  border-color:red;
+  border-width:3px;
+  border-radius:8px
+
+}
+.need:focus{
+  outline:none;
+}
+
+select[name=part]{
+  width:172px;
+}
+
+input[type=date]{
+  width : 172px;
+  font-size : 20px;
+}
+
+#selfIntro{
+  width : 350px;
+  height : 150px;
+  resize : none;
+  overflow : hidden; /*스크롤바를 없애줌*/
