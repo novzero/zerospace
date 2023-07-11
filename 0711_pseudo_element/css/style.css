@@ -1,0 +1,45 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+#para1::before{
+  content:"ㅋㅋㅋ";
+  color:green;
+}
+#para1::after{
+  content:"ㅎㅎㅎ";
+  color:purple;
+}
+
+
+#list1{
+  margin-left:25px;
+}
+#list1>li::after{
+  content:"원";
+  font-size:0.8em; /*상대적 크기 지정 em*/
+  color:gray;
+}
+
+#clsBtn{
+  width:50px;
+  height:50px;
+}
+
+#clsBtn::before,
+#clsBtn::after{
+  content:"";
+  display:block;
+  width:50px;
+  height:3px;
+  background-color:red;
+
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform : translate(-50%, -50%);
+
+
+}

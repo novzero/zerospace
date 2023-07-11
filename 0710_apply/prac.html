@@ -5,24 +5,79 @@
     <meta name = "author" content = "Chaeyoung Lee">
     <meta name = "keyword" cotent = "삼성, 삼성전자, 공채, 입사지원폼">
     <meta name = "description" content = "삼성전자 공채 입사지원 페이지">
-    <title>삼성전자 공채 입사지원폼</title>
+    <title>연습 - 삼성전자 공채 입사지원폼</title>
   </head>
   <body>
     <form action = "apply.jsp" method = "get">
-      성명 : 
-      <input type ="text" name = "userName"> <br>
-      아이디 : 
-      <input type = "text" name = "userId"><br>
-      비밀번호 :
-      <input type ="password" name = "userPw"><br>
-      지원부서 :
-      <select name = "part">
-        <option value = "">지원할 부서를 선택하세요.</option>
-        <option value = "1">개발팀</option>
-        <option value = "2">디자인팀</option>
-        <option value = "3">총무팀</option>
-        <option value = "4">인사팀</option>
-      </select>
+      <table>
+        <tr>
+          <td>
+            성명
+          </td>
+          <td>
+            <input type ="text" name = "userName"> <br>
+          </td> 
+        </tr>
+        <tr>
+          <td>아이디</td> 
+          <td><input type="text" name="userId"></td>
+        </tr>
+        <tr>
+          <td>비밀번호</td>
+          <td><input type ="password" name = "userPw"></td>
+        </tr>
+        <tr>
+          <td>지원부서</td>
+          <td>
+            <select name = "part">
+              <option value = "">지원할 부서를 선택하세요.</option>
+              <option value = "1">개발팀</option>
+              <option value = "2">디자인팀</option>
+              <option value = "3">총무팀</option>
+              <option value = "4">인사팀</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>희망연봉</td>
+          <td><input type="number" name="annual" min="1900" max="5000" step="50">
+          <input type="radio" name="consul">면접 후 결정
+          </td>
+        </tr>
+        <tr>
+          <td>국적</td>
+          <td><input type="radio" name="nation" value="1">내국인
+          <input type="radio" name="nation" value="2">외국인
+          </td>
+        </tr>
+        <tr>
+          <td>출신국가</td>
+          <td>
+            <select>
+              <optgroup label="아시아">
+                <option value="1">대한민국</option>
+                <option value="2">일본</option>
+              </optgroup>
+              <optgroup label="아메리카">
+                <option value="3">미국</option>
+                <option value="4">캐나다</option>
+              </optgroup>
+              <optgroup label="유럽">
+                <option value="5">영국</option>
+                <option value="6">프랑스</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            자기소개서
+          </td>
+          <td>
+            <textarea name="esssay" placeholder="300자미만으로 작성하시오."></textarea>
+          </td>
+        </tr>
+      </table>
 
     </form>
     

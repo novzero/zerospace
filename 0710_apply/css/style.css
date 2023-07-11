@@ -1,3 +1,103 @@
+/*css reset*/
+* {
+  margin:0;
+  padding:0;
+  box-sizing : border-box;
+}
+
+#spec{
+  margin:30px;
+  border-collapse:collapse;
+  /*border-collapse는 칸을 구분하는 선을 하나로 보이게 합쳐줌*/
+  border-top : 1px solid red;
+}
+#spec th,
+#spec td{
+  padding:0.2px;
+  border-bottom : 1px solid red;
+  border-right : 1px solid black;
+}
+#spec th{
+  background-color:aquamarine;
+}
+
+#spec th:last-child,
+#spec td:last-child{
+  border-right : none;
+}
+
+
+
+#grade{
+  margin:30px;
+  border-collapse:collapse;
+  border-top : 1px solid blue;
+}
+
+#grade th,
+#grade td{
+  /*두께 종류 색깔 순으로 써줘야함*/
+  border-bottom : 1px solid red;
+  border-right : 1px solid green; 
+}
+
+#grade th:last-of-type,
+#grade td:last-of-type{
+  border-right : none;
+}
+
+#box1>p:first-child{
+  color:blue;
+  font-size : 50px;
+}
+
+#box1>p:last-child{
+  color:purple;
+  font-size:30px;
+}
+
+#box1>p:nth-child(2){
+  color:green;
+  font-size:20px;
+}
+
+#box2>p:nth-child(2n){
+  color:orange;
+}
+
+#box2>p:nth-child(odd){
+  color:gray;
+}
+/* 
+짝수 : 2n, even 
+홀수 : 2n-1, odd 
+방정식도 삽입이 가능함.
+*/
+
+#box3>p:first-of-type{
+  color:red;
+}
+/*p:first-child 를 사용하면 div 태그가 첫번째에 있기 때문에 작동안함
+p태그 중에서 첫번째를 선택할 때는 first-of-type을 사용해야함*/
+#box3>p:last-of-type{
+  color:blue;
+}
+
+
+#p1, .p2, .p3 {color:red;}
+
+#parent>p{
+  color : yellow;
+}
+
+a {
+  text-decoration : none;
+}
+
+
+#resume td{
+  border : 1px solid orange;
+}
 
 #resume{
   width : 500px;
@@ -9,6 +109,16 @@ margin은 여백을 지정하는 속성
 0 위치에는 상하여백을 지정한 것.
 auto 위치에는 좌우여백을 지정해야하는데 auto는 자동으로 똑같은 값으로 설정하는 것.
 */
+
+
+#resume tr:nth-child(2n)>td{
+  background-color : aliceblue;
+
+}
+
+
+
+
 .title{
   text-align : right;
 

@@ -8,42 +8,69 @@
 #box1{
   border : 1px solid red;
   height : 50px;
-  width : 50%;
-  margin-bottom : 50px;
-  line-height : 50px;
-  font-size : 20px;
-  font-weight : 900;
+  width : 100%;
+  display:flex;
+  justify-content:start;
+  align-items:center;
 }
+/*
+  flex는 레이아웃 구성, 현재실무에서 태그를 배치하는 방법 중 하나이다.
+  display:flex가 적용된 태그는 부모태그(flex컨테이너)라고 한다.
+  flex적용된 태그의 하위태그들은 flex아이템 이라고 한다.
 
+  flex는 주축과 교차축에 의해 배치가 된다.
+  주축 기준으로 배치는 justify-content, end, space-around,
+  space-between 있다. 
 
-#box2{
-  border:1px dashed blue;
-  width : 300px;
-  height : 100px;
-  line-height : 100px;
-}
+*/
+
 
 #box1, #box2{
-  text-align : center;
+  text-align : left;
   vertical-align : middle;
 }
 
 .logo_box{
   width:200px;
-  float:left;
+  /*float:left;*/
 }
 
 .logo_box img{
   height : 50px;
+}
 
+.menubox{
+  width:calc(100%-200px);
 }
 
 
 .menu{
   list-style-type:none;
+  display:flex;
+  margin:0;
+  padding:0;
+  justify-content:space-between;
 }
 
 .menuTitle{
-  float:left;
-  margin-left:80px;
+  /*float:left;*/
+  /*margin-left:80px;*/
+}
+
+/*
+flex에서 수평배치를 하려면 주축기준으로 해야한다.
+주축은 justify-content이다.
+*/
+
+#box2{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  row-gap:50px;
+}
+.items{
+  wrap:300px;
+  /* overflow:hidden; */
+
 }

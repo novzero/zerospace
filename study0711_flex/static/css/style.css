@@ -1,0 +1,72 @@
+.item:nth-child(1){
+  background-color : rgb(255, 226, 231);
+}
+.item:nth-child(2){
+  background-color:rgb(190, 241, 243);
+}
+.item:nth-child(3){
+  background-color: rgb(169, 231, 255);
+}
+.item:nth-child(4){
+  background-color: rgb(116, 230, 160);
+}
+
+
+#box1{
+  width:500px;
+  height:200px;
+  border : 1px solid black;
+  display:flex;
+  justify-content:space-evenly;
+  /*
+  justify-content : 주축기준 정렬
+  start
+  end 
+  center
+  space-around
+  space-between
+  space-evenly
+  */
+}
+
+#box1 .item{
+  width:50px;
+}
+
+
+#box2{
+  width:500px;
+  height:200px;
+  border:1px solid black;
+  display:flex;
+  align-items:center; /*수직방향 stretch, end, center*/
+  justify-content:center;
+}
+
+#box2 .item{
+  width:50px;
+  height:50px;
+}
+
+
+#box3{
+  width:500px;
+  height:200px;
+  border:1px solid black;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: end;
+}
+
+#box3 .item{
+  width:50px;
+  height:30px;
+}
+
+#box3 .item:nth-child(3){
+  order:1;
+}
+#box3 .item:nth-child(1){
+  order:2;
+}

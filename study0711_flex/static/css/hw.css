@@ -1,0 +1,15 @@
+
+#box1{
+  width: 200px;
+  height:2000px;
+  border: 1px solid blue;
+  background-color: skyblue;
+}
+.menu{
+  text-align:center;
+  
+}
+
+.image{
+  wrap:300px;
+}
