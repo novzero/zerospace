@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang=""ko">
+<head>
+  <title>javascript 사용해보기</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Chaeyoung Lee">
+  <meta name="keyword" content="javascript, 자바스크립트">
+  <meta name="descriptopm" content="자바스크립트 사용해보기">
+</head>
+<body>
+  <script>
+    // alert("Hello \nWorld");
+
+    //var: 지금부터 변수를 만들겠다.
+    // 변수, 함수 이름 짓는 규칙
+    // 1. 영어, 숫자만 사용
+    // 2. 첫 번째 글자는 영어(숫자로 시작하면 안됨)
+    // 3. 이미 있는 이름과 겹치면 안됨
+    // 4. 내용/의도를 가늠할 수 있는 이름
+    // 5. 띄어쓰기, 특수문자 금지(_는 사용가능)
+
+    // var boxWidth;
+    // boxWidth = "Hello World";
+    // alert(boxWidth);
+
+    // var marriage = false;
+
+    // if(marriage == true){
+    //   alert("결혼을 축하합니다")
+    // }else{
+    //   alert("잘사세요")
+    // }
+
+    // var apart = [
+    //   ["a","b","c","d","e"],
+    //   ["A","B","C","D","E"],
+    //   ["가","나","다","라","마"],
+    //   ["아","야","어","여","오"],
+    //   ["뿡","빵","삥"]
+    // ];
+
+    // var floor;
+    // var room;
+    // var target="나";
+
+    // for(i=0; i<apart.length; i++){
+    //   for(j=0; j<apart[i].length; j++){
+    //     if(apart[i][j] == target){
+    //       floor = i+1;
+    //       room = j+1;
+    //       break;
+    //     }
+    //   }
+    // }
+    // alert(target + "는 " + floor + "층, " + room + "호실에서 발견됨.");
+
+    var employee =[
+      {
+        name:"김일호",
+        rank:"부장",
+        title:"팀장",
+        salary:450
+      },
+      {
+        name:"김이호",
+        rank:"부장",
+        title:"팀장",
+        salary:350
+      },
+      {
+        name:"김삼호",
+        rank:"부장",
+        title:"팀장",
+        salary:280
+      },
+      {
+        name:"김사호",
+        rank:"부장",
+        title:"팀장",
+        salary:500
+      }
+    ];
+
+    alert(employee[0].salary);
+    var total=0;
+    for(i=0; i<employee.length; i++){
+      total = total + employee[i].salary;
+    }
+    alert(total);
+    
+    
+    </script>
+</body>
+
+</html>
