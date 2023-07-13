@@ -132,9 +132,36 @@
 주차한 시간이 총 몇 분인지 입력하여 요금 출력하기
 */
 
-var time = Number(prompt("주차시간을 입력하세요(분)"));
-var cost = 0;
+var user = Number(prompt("주차시간을 입력하세요(분)"));
+var fee = 0;      //기본요금
+var fee2 = 0;     //추가요금
+var time = 0;     //단위시간(분)
+var total = 0;    //총요금
 
-if(time >= 120){
-  
+if(isNaN(user)){
+  alert("숫자만 입력해주세요");
+  var user = Number(prompt("주차시간을 입력하세요(분)"));
 }
+
+function cal(time, fee){
+  fee2 = (user - time)/10 *100;
+  total = fee + fee2;
+}
+
+if(user <= 30){
+  total = 1000;
+}
+else if(user>30 && user < 120){
+  cal(30, 1000);  
+}
+else if(user>=120 && user<160){
+  cal(120, 1500);
+}
+else if(user>=240 && user<480){
+  cal(240, 2500);
+}
+else{
+  total = 5000;
+}
+
+document.write("주차요금은 " +total+ "원");
