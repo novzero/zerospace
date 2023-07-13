@@ -19,20 +19,29 @@
       name="이채영";
       age=24;
 
-      var number1 = Number(prompt("숫자를 입력하세요"));
-      var number2 = parseInt(prompt("두번째 숫자를 입력하세요"));
+      // var number1 = Number(prompt("숫자를 입력하세요"));
+      // var number2 = parseInt(prompt("두번째 숫자를 입력하세요"));
 
-      // document.write(number1*number2);
+      // // document.write(number1*number2);
+      // // document.write(typeof(number1));
 
-      // document.write(typeof(number1));
+      // var result = number1 + number2;
 
-      var result = number1 + number2;
+      // document.write(result);
 
-      document.write(result);
+
 
       //오늘의 과제
       // 사각형의 너비와 높이를 입력받아서 넓이가 얼마인지 출력하시오.
       
+      var width = Number(prompt("너비를 입력하세요"));
+      var height = Number(prompt("높이를 입력하세요"));
+      
+      var square = width * height;
+
+      document.write("사각형의 넓이는 " + square +"입니다.");
+
+
     </script>
 
   </head>
