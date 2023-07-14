@@ -1,0 +1,121 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+ul, ol{
+  list-style-type : none;
+}
+
+body{
+  background: rgb(0, 0, 0);
+  color : #fff;
+}
+
+#wrap{
+  width:90%;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+#header{
+  width:100%;
+  position:relative;
+}
+
+#header .title{
+  text-align : center;
+  padding : 10px 0;
+}
+
+#header .title h2{
+  border-bottom : 1px solid #fff;
+  display:inline-block;
+  padding-bottom:10px;
+}
+
+#header .navigation{
+  width:200px;
+  margin:0 auto;
+  padding:10px;
+  position: relative;
+}
+
+#header .navigation .nav{
+  width:100%;
+  position:relative;  
+  overflow:hidden;
+}
+
+#header .navigation .nav .nav_menu{
+  width:900px;
+  display:flex;
+  transition: left 1s ease;
+  
+  position: relative;
+  left: 0;
+}
+
+#header .navigation .nav .nav_menu li{
+  width:180px;
+  text-align: center;
+}
+
+
+/* 화살표 아이콘 */
+#header .navigation .direction p{
+  position:absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  cursor: pointer;
+}
+
+#header .navigation .direction .prev{
+  left:-10px;
+}
+#header .navigation .direction .next{
+  right:-10px;
+}
+
+
+#section{
+  width:100%;
+  margin-top:30px;
+}
+
+#section h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#section .list_box{
+  border-spacing:0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#section .list_box tr td{
+  border-bottom: 1px solid #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#section .list_box .name span{
+  display:block;
+  width:48px;
+  position:relative;
+}
+
+#section .list_box .name span::after{
+  content:"";
+  width:48px;
+  position:absolute;
+  top:25px;
+  left:0;  
+}
+
+
+#section .list_box .name span:hover{
+  border-bottom:2px solid orange;
+}
