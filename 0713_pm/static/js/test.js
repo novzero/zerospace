@@ -154,7 +154,7 @@ if(user <= 30){
 else if(user>30 && user < 120){
   cal(30, 1000);  
 }
-else if(user>=120 && user<160){
+else if(user>=120 && user<240){
   cal(120, 1500);
 }
 else if(user>=240 && user<480){
