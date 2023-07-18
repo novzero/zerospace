@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+
+  <style>
+    #wrap{
+      width:500px;
+      margin:0 auto;
+    }
+    #chat_list{
+      padding:0;
+      margin:0;
+      list-style:none;
+    }
+    #chat_list_li{
+      margin:10px 0;
+      border-bottom:2px solid #adadad;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div>
+      작성자 : <input type="text" id="name" value="이채영"> <br>
+      내용 : <textarea id="content" cols="50" rows="3"> </textarea> <br>
+      <button id="send">보내기</button>
+    </div>
+    <ul id="chat_list">
+
+    </ul>
+  </div>
+  
+</body>
+</html>
+
+<script>
+  $("#send").click(function(){
+    if($("#name").val() == ''){
+      alert("작성자 입력하세요");
+      $("#name").focus();
+    }else if($("#content").val() == ''){
+      alert("내용 작성하세요");
+      $("#content").focus();
+
+    }
+
+    var sendData = JSON.stringify(
+      {"writer":$("#name").val(), "content":$("#content").val() }
+    );
+
+    var result = "";    //서버로부터 받은 값 저장 변수
+
+    //JSON 서버로 보내기
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = function(){
+      result = this.responseText;   //서버로부터 받는 곳
+      make_list(JSON.parse(result));
+    }
+
+    xmlhttp.open("POST", "http://krdrive.ipdisk.co.kr:8000/test/data.php");
+    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xmlhttp.send("x="+sendData);
+
+
+  });
+
+  function make_list(data){
+    var out="";
+
+    for(var i=0; i<data.length; i++){
+      out += "<li>" + data[i].wirter + ":" + data[i].date+
+        " <p>"+data[i].content+"</p></li>";
+    }
+    $("#chat_list").html(out);
+    $("#content").val('')
+    $("content").focus
+  }
+
+</script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Chaeyoung Lee">
+  <meta name="keywords" content="object">
+  <meta name="description" content="7월 18일 오후수업">
+  
+  <title>JSON</title>
+  
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+<!-- 
+  오늘 수업
+  1. json 데이터 만들고 사용하기
+  2. json 파일을 만들어서 데이터 읽어와서 사용하기
+  3. json 데이터를 서버에 보내 저장시키고 서버에 저장된 데이터를 json형식으로 가져와서 사용하기
+  4. 공공데이터의 json데이터를 가져와보기 -->
+
+
+  <h1>JSON 사용하기</h1>
+  <div id="input_box">
+    <input type="text" name="name" id="name" placeholder="이름"> <br>
+    <input type="text" name="age" id="age" placeholder="나이"> <br>
+    <input type="text" name="tel" id="tel" placeholder="연락처"> <br>
+    <button id="save_bt">저장하기</button>
+  </div>
+  <div id="output_box">
+
+  </div>
+
+</html>
+
+<script>
+  let info = new Array();
+  info[0] = {"name":"이채영", "age":"24", "tel":"01086430563"};
+
+  let jsoninfo = JSON.stringify(info);    //자바스크립트 객체를 json으로 변환 
+  //반대로 json을 자바스크립트로 변환할 때는 : JSON.parse()
+  //서버에 보낼 때는 json으로 변환하고 서버로부터 받을 때는 자바스크립트로 변환한다.
+  console.log(JSON.parse(jsoninfo));
+  console.log(jsoninfo);
+
+  $("#save_bt").click(save_info);
+
+  let cnt=0;
+  function save_info(){
+    var name = $("#name").val();
+    var age = $("#age").val();
+    var tel = $("#tel").val();
+    info[++cnt] = {"name":name, "age":age, "tel":tel};
+
+    console.log(JSON.stringify({"info":info}));
+
+    // $("#tel").keyup(function(e){
+    //   if(e.keyCode == 13){
+    //     $("#save_bt").trigger("click");
+    //   }
+    // });
+
+    /*
+    $("#output_box").html(
+      "이름 : " + info.name
+      + "<br>나이 : " + info.age
+      + "<br>연락처 : "+info.tel
+    );
+    */
+
+    for(var i=0; i<info.length; i++){
+      $("#output_box").append(
+        "<br> 이름 : "+info[i].name+
+        "<br> 나이 : " + info[i].age +
+        "<br> 연락처 : " + info[i].tel
+      );
+    }
+
+  };
+</script>
