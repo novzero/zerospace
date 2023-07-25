@@ -8,46 +8,7 @@
 
     
     <script src="./static/script/login.js"></script>
-
-    <style>
-      #wrap{
-        margin:auto;
-        width:400px;
-        height:350px;
-        padding:40px;
-        box-sizing: border-box;
-        border: 1px solid rgb(238, 238, 238);
-        border-radius:5px;
-    
-      }
-
-      .input_box{
-        width:100%;
-        text-align: center;
-      }
-
-      .input_box #id, #password{
-        width:300px;
-        height:40px;
-        padding: 0 10px;
-        border: none;
-        border-radius: 5px;
-        background-color: rgb(238, 238, 238);
-      }
-
-      #submitBtn{
-        width: 100%;
-        height: 50px;
-        margin-top: 20px;
-        
-        color : white;
-        text-align: center;
-        font-size:18px;
-        border: none;
-        background-color:rgb(152, 74, 255);
-        border-radius:10px;
-      }
-    </style>
+    <link href="./static/css/login.css" rel="stylesheet">
   </head>
 
   <body>
@@ -57,7 +18,8 @@
         <p><input id="id" name="userId" type="text" placeholder="Id"></p>
         <p><input id="password" name="userPassword" type="Password" placeholder="password"></p>
       </div>
-      <button id="submitBtn">Login</button>
+      <input id="checkbox" type="checkbox">아이디 기억하기
+      <button id="submitBtn" onclick="location.href='hello.html'">Login</button>
     </div>
     
     
